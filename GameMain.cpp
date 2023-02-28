@@ -31,9 +31,12 @@ int GameMain(void) {
 
 	while (run) {
 		frameStart = SDL_GetTicks();
+
+		//»æÍ¼²Ù×÷
 		OnInput();
 		Update();
 		SceneUpdate();
+
 		if (SDL_GetTicks()-frameStart<8) {
 			SDL_Delay(8 - (SDL_GetTicks() - frameStart));
 		}
