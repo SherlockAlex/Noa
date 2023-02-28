@@ -1,4 +1,3 @@
-﻿  GameMain.cpp
-  Runtime.cpp
-  正在生成代码...
+﻿  Update.cpp
+D:\Work\Learn\noa\noa\Graphic.h(23,2): warning C4091: “typedef ”: 没有声明变量时忽略“Sprite”的左侧
   noa.vcxproj -> D:\Work\Learn\noa\x64\Debug\noa.exe

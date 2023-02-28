@@ -146,6 +146,7 @@
   <ItemGroup>
     <ClCompile Include="GameMain.cpp" />
     <ClCompile Include="GameSetting.cpp" />
+    <ClCompile Include="Graphic.cpp" />
     <ClCompile Include="InputSystem.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Runtime.cpp" />
