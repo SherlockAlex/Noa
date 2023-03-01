@@ -4,22 +4,24 @@
 
 using namespace std;
 
-void CreateSprite(const char * imageName, Sprite* sprite, SDL_FRect* dispRect, SDL_Rect* imgRect)
+Sprite CreateSprite(const char * imageName, SDL_FRect* dispRect, SDL_Rect* imgRect)
 {
-	sprite->surface = IMG_Load(imageName);
-	if (sprite->surface == NULL) {
-		cout << "¶ÁÈ¡Í¼Æ¬Ê§°Ü" << endl;
-		return;
-	}
+	Sprite sprite;
+	sprite.surface = IMG_Load(imageName);
+	//if (sprite.surface == NULL) {
+	//	cout << "¶ÁÈ¡Í¼Æ¬Ê§°Ü" << endl;
+	//	return;
+	//}
 
-	sprite->texture = SDL_CreateTextureFromSurface(gameRenderer,sprite->surface);
-	if (sprite->texture) {
-		cout << "µ¼ÈëÍ¼Æ¬Ê§°Ü" << endl;
-		return;
-	}
+	sprite.texture = SDL_CreateTextureFromSurface(gameRenderer,sprite.surface);
+	//if (sprite.texture) {
+	//	cout << "µ¼ÈëÍ¼Æ¬Ê§°Ü" << endl;
+	//	return;
+	//}
 
-	sprite->displayRect = dispRect;
-	sprite->imageRect = imgRect;
+	sprite.displayRect = dispRect;
+	sprite.imageRect = imgRect;
+	return sprite;
 
 }
 
@@ -27,6 +29,16 @@ void DrawSprite(Sprite* sprite)
 {
 	SDL_RenderClear(gameRenderer);
 	SDL_RenderCopyF(gameRenderer, sprite->texture, sprite->imageRect, sprite->displayRect);
+	SDL_RenderPresent(gameRenderer);
+}
+
+void DrawSprite(Sprite* sprites[])
+{
+	SDL_RenderClear(gameRenderer);
+	for (int i = 0; sprites[i] != NULL;i++) {
+		SDL_RenderCopyF(gameRenderer, sprites[i]->texture, sprites[i]->imageRect, sprites[i]->displayRect);
+	}
+	/*äÖÈ¾³öÍ¼Æ¬*/
 	SDL_RenderPresent(gameRenderer);
 }
 

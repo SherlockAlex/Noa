@@ -23,10 +23,13 @@ typedef struct Sprite {
 };
 
 //用来对精灵初始化
-extern void CreateSprite(const char * imageName, Sprite* sprite,SDL_FRect * dispRect,SDL_Rect * imgRect);
+extern Sprite CreateSprite(const char * imageName,SDL_FRect * dispRect,SDL_Rect * imgRect);
 
 //绘制精灵
 extern void DrawSprite(Sprite* sprite);
+
+/*绘画出精灵数组*/
+extern void DrawSprite(Sprite * sprites[]);
 
 //绘制像素点
 extern void DrawPixel(int x, int y);

@@ -1,3 +1,10 @@
-﻿  Update.cpp
+﻿  Graphic.cpp
 D:\Work\Learn\noa\noa\Graphic.h(23,2): warning C4091: “typedef ”: 没有声明变量时忽略“Sprite”的左侧
+  TestScene.cpp
+D:\Work\Learn\noa\noa\Graphic.h(23,2): warning C4091: “typedef ”: 没有声明变量时忽略“Sprite”的左侧
+D:\Work\Learn\noa\noa\TestScene.cpp(36,15): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+D:\Work\Learn\noa\noa\TestScene.cpp(37,15): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+D:\Work\Learn\noa\noa\TestScene.cpp(54,15): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+D:\Work\Learn\noa\noa\TestScene.cpp(55,15): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+  正在生成代码...
   noa.vcxproj -> D:\Work\Learn\noa\x64\Debug\noa.exe

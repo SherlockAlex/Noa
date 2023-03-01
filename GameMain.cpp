@@ -1,7 +1,6 @@
 #include "Game.h"
 #include "InputSystem.h"
 #include "Start.h"
-#include "Update.h"
 #include "Runtime.h"
 
 int frameStart = 0;
@@ -12,10 +11,10 @@ int GameMain(void) {
 
 	//在这里要先加载场景
 
-	/*if (SceneStart == NULL) {
+	if (SceneStart == NULL) {
 		cout << "当前没有任何场景被加载" << endl;
 		return -1;
-	}*/
+	}
 
 	if (Start()!=0) {
 		cout << "游戏初始化失败" << endl;
@@ -23,7 +22,7 @@ int GameMain(void) {
 	}
 	
 	//场景的初始化
-	//SceneStart();
+	SceneStart();
 
 	SDL_Event inputEvents;
 	inputEvent = &inputEvents;
@@ -34,8 +33,7 @@ int GameMain(void) {
 
 		//绘图操作
 		OnInput();
-		Update();
-		//SceneUpdate();
+		SceneUpdate();
 
 		if (SDL_GetTicks()-frameStart<8) {
 			SDL_Delay(8 - (SDL_GetTicks() - frameStart));

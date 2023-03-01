@@ -27,9 +27,6 @@
     <ClCompile Include="GameMain.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Update.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="InputSystem.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -37,6 +34,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Graphic.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TestScene.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -53,13 +56,16 @@
     <ClInclude Include="GameSetting.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Update.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="InputSystem.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Runtime.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TestScene.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

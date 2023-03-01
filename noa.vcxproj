@@ -144,6 +144,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AssetManager.cpp" />
     <ClCompile Include="GameMain.cpp" />
     <ClCompile Include="GameSetting.cpp" />
     <ClCompile Include="Graphic.cpp" />
@@ -151,16 +152,17 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Runtime.cpp" />
     <ClCompile Include="Start.cpp" />
-    <ClCompile Include="Update.cpp" />
+    <ClCompile Include="TestScene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AssetManager.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameSetting.h" />
     <ClInclude Include="Graphic.h" />
     <ClInclude Include="InputSystem.h" />
     <ClInclude Include="Runtime.h" />
     <ClInclude Include="Start.h" />
-    <ClInclude Include="Update.h" />
+    <ClInclude Include="TestScene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
