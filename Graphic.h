@@ -16,10 +16,10 @@ typedef struct Sprite {
 	SDL_Texture* texture;
 
 	/*渲染用的信息*/
-	SDL_FRect * displayRect;
+	SDL_FRect  displayRect;
 	
 	/*图片的信息*/
-	SDL_Rect * imageRect;
+	SDL_Rect  imageRect;
 };
 
 //用来对精灵初始化

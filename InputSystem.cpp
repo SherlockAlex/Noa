@@ -34,6 +34,7 @@ void OnInput(void)
 
 	switch (inputEvent->type)
 	{
+	case SDLK_ESCAPE:
 	case SDL_QUIT:
 		SDL_Quit();
 		run = false;

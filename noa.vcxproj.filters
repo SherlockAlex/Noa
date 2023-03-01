@@ -68,5 +68,21 @@
     <ClInclude Include="TestScene.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="noa.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\NoaGameEngine\NoaGameEngine\windows\Map.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\NoaGameEngine\NoaGameEngine\windows\Mario.png">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>

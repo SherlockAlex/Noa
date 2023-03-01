@@ -19,8 +19,8 @@ Sprite CreateSprite(const char * imageName, SDL_FRect* dispRect, SDL_Rect* imgRe
 	//	return;
 	//}
 
-	sprite.displayRect = dispRect;
-	sprite.imageRect = imgRect;
+	sprite.displayRect = *dispRect;
+	sprite.imageRect = *imgRect;
 	return sprite;
 
 }
@@ -28,7 +28,7 @@ Sprite CreateSprite(const char * imageName, SDL_FRect* dispRect, SDL_Rect* imgRe
 void DrawSprite(Sprite* sprite)
 {
 	SDL_RenderClear(gameRenderer);
-	SDL_RenderCopyF(gameRenderer, sprite->texture, sprite->imageRect, sprite->displayRect);
+	SDL_RenderCopyF(gameRenderer, sprite->texture, &sprite->imageRect, &sprite->displayRect);
 	SDL_RenderPresent(gameRenderer);
 }
 
@@ -36,10 +36,11 @@ void DrawSprite(Sprite* sprites[])
 {
 	SDL_RenderClear(gameRenderer);
 	for (int i = 0; sprites[i] != NULL;i++) {
-		SDL_RenderCopyF(gameRenderer, sprites[i]->texture, sprites[i]->imageRect, sprites[i]->displayRect);
+		SDL_RenderCopyF(gameRenderer, sprites[i]->texture, &sprites[i]->imageRect,&sprites[i]->displayRect);
 	}
 	/*äÖÈ¾³öÍ¼Æ¬*/
 	SDL_RenderPresent(gameRenderer);
+	//cout << "äÖÈ¾Í¼Æ¬³É¹¦" << endl;
 }
 
 void DrawPixel(int x, int y)
