@@ -26,5 +26,5 @@ float factorial(float x)
 		return 1;
 	}
 
-	return (x-1) * factorial(x-1);
+	return (x) * factorial(x-1);
 }

@@ -1,8 +1,3 @@
-﻿  InputSystem.cpp
+﻿  TestScene.cpp
 D:\Work\Learn\noa\noa\Graphic.h(23,2): warning C4091: “typedef ”: 没有声明变量时忽略“Sprite”的左侧
-  NoaMath.cpp
-D:\Work\Learn\noa\noa\NoaMath.cpp(9,10): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-  TestScene.cpp
-D:\Work\Learn\noa\noa\Graphic.h(23,2): warning C4091: “typedef ”: 没有声明变量时忽略“Sprite”的左侧
-  正在生成代码...
   noa.vcxproj -> D:\Work\Learn\noa\x64\Debug\noa.exe

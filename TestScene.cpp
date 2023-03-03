@@ -35,6 +35,7 @@ void OnTestSceneStart()
 	cout << map.imageRect.h << endl;
 
 	cout << noaSqrt(2) << endl;
+	cout << factorial(5) << endl;
 
 }
 
