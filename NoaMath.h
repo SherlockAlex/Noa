@@ -4,6 +4,9 @@
 /*这个库是封装数学库*/
 #include <math.h>
 
+extern float noaSqrt(float x);
+
+extern float inv(float x);
 
 #endif // !NOA_NOAMATH_H
 
