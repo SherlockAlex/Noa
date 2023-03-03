@@ -8,6 +8,9 @@ extern float noaSqrt(float x);
 
 extern float inv(float x);
 
+/*½×³Ë*/
+extern float factorial(float x);
+
 #endif // !NOA_NOAMATH_H
 
 

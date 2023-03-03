@@ -1,6 +1,7 @@
 #include "TestScene.h"
 #include "Game.h"
 #include "AssetManager.h"
+#include "NoaMath.h"
 #include <iostream>
 
 using namespace std;
@@ -32,6 +33,8 @@ void OnTestSceneStart()
 	cout << map.imageRect.y << endl;
 	cout << map.imageRect.w << endl;
 	cout << map.imageRect.h << endl;
+
+	cout << noaSqrt(2) << endl;
 
 }
 

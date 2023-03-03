@@ -150,6 +150,7 @@
     <ClCompile Include="Graphic.cpp" />
     <ClCompile Include="InputSystem.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="NoaMath.cpp" />
     <ClCompile Include="Runtime.cpp" />
     <ClCompile Include="Start.cpp" />
     <ClCompile Include="TestScene.cpp" />
@@ -160,6 +161,7 @@
     <ClInclude Include="GameSetting.h" />
     <ClInclude Include="Graphic.h" />
     <ClInclude Include="InputSystem.h" />
+    <ClInclude Include="NoaMath.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Runtime.h" />
     <ClInclude Include="Start.h" />

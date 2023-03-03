@@ -19,3 +19,12 @@ float inv(float x)
 	y = y * (2 - x * y);
 	return y;
 }
+
+float factorial(float x)
+{
+	if (x <= 1) {
+		return 1;
+	}
+
+	return (x-1) * factorial(x-1);
+}
