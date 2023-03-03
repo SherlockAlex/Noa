@@ -8,7 +8,8 @@ void (*InputEvent[100]) (void);
 void AddToInputEvent(void(*keyEvent)(void))
 {
 	int i = 0;
-	while (InputEvent[i]!=NULL) {
+	while (InputEvent[i]!=NULL) 
+	{
 		i++;
 		if (i>=100) {
 			cout << "事件列表已满" << endl;
