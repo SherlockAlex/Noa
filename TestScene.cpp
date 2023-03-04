@@ -43,6 +43,7 @@ void OnTestSceneStart()
 	cout << inv(4) << endl;
 	//cout << factorial(5) << endl;
 
+	/*将人物移动的函数绑定到键盘事件上*/
 	AddToInputEvent(UpdatePlayerPosition);
 
 }
