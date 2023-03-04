@@ -47,7 +47,7 @@ void OnTestSceneUpdate()
 	//cout << "TestScene running" << endl;
 	DrawSprite(sprites);
 
-	player.displayRect.y += 1;
+	player.displayRect.y += 10;
 }
 
 void CreateMap(const char* fileName, Sprite* map, int w, int h) {
