@@ -3,4 +3,6 @@
 
 /*游戏的物理模块*/
 
+extern void ApplyGrivaty(float * y,bool on);
+
 #endif // !NOA_PHYSICS_H
