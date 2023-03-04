@@ -5,6 +5,7 @@
 #include "AssetManager.h"
 #include "NoaMath.h"
 #include "Physics.h"
+#include "InputSystem.h"
 
 using namespace std;
 
@@ -15,6 +16,8 @@ void CreatePlayer(const char* fileName,Sprite * player,int w,int h);
 
 Sprite map;
 Sprite player;
+
+void UpdatePlayerPosition();
 
 void OnTestSceneStart()
 {
@@ -40,6 +43,8 @@ void OnTestSceneStart()
 	cout << inv(4) << endl;
 	//cout << factorial(5) << endl;
 
+	AddToInputEvent(UpdatePlayerPosition);
+
 }
 
 void OnTestSceneUpdate()
@@ -49,7 +54,7 @@ void OnTestSceneUpdate()
 	//cout << "TestScene running" << endl;
 	DrawSprite(sprites);
 
-	ApplyGrivaty(&player.displayRect.y, (player.displayRect.y < 100));
+	ApplyGrivaty(&player.displayRect.y, (player.displayRect.y < 300));
 	//player.displayRect.y += 10;
 
 }
@@ -102,4 +107,19 @@ void CreatePlayer(const char* fileName, Sprite* player, int w, int h) {
 	player->imageRect = imgRect;
 
 	cout <<"绘制角色成功" << endl;
+}
+
+void UpdatePlayerPosition() {
+	/*实现人物移动*/
+	switch (inputEvent->key.keysym.sym)
+	{
+	case SDLK_RIGHT:
+		player.displayRect.x + 1;
+		break;
+	case SDLK_LEFT:
+		player.displayRect.x + 1;
+		break;
+	default:
+		break;
+	}
 }
