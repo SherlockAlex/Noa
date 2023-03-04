@@ -114,12 +114,13 @@ void UpdatePlayerPosition() {
 	switch (inputEvent->key.keysym.sym)
 	{
 	case SDLK_RIGHT:
-		player.displayRect.x + 1;
+		player.displayRect.x += 5;
 		break;
 	case SDLK_LEFT:
-		player.displayRect.x + 1;
+		player.displayRect.x -= 5;
 		break;
 	default:
 		break;
 	}
+
 }
