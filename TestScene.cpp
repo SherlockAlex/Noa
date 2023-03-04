@@ -1,8 +1,10 @@
+#include <iostream>
+
 #include "TestScene.h"
 #include "Game.h"
 #include "AssetManager.h"
 #include "NoaMath.h"
-#include <iostream>
+#include "Physics.h"
 
 using namespace std;
 
@@ -47,7 +49,9 @@ void OnTestSceneUpdate()
 	//cout << "TestScene running" << endl;
 	DrawSprite(sprites);
 
-	player.displayRect.y += 10;
+	ApplyGrivaty(&player.displayRect.y, (player.displayRect.y < 100));
+	//player.displayRect.y += 10;
+
 }
 
 void CreateMap(const char* fileName, Sprite* map, int w, int h) {
