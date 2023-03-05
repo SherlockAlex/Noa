@@ -17,6 +17,8 @@ void CreatePlayer(const char* fileName,Sprite * player,int w,int h);
 Sprite map;
 Sprite player;
 
+bool isJump = false;
+
 void UpdatePlayerPosition();
 
 void OnTestSceneStart()
@@ -115,10 +117,14 @@ void UpdatePlayerPosition() {
 	switch (inputEvent->key.keysym.sym)
 	{
 	case SDLK_RIGHT:
-		player.displayRect.x += 5;
+		player.displayRect.x += 10;
 		break;
 	case SDLK_LEFT:
-		player.displayRect.x -= 5;
+		player.displayRect.x -= 10;
+		break;
+	case SDLK_UP:
+		cout << "ÌøÔ¾¹¦ÄÜ" << endl;
+
 		break;
 	default:
 		break;
