@@ -18,6 +18,8 @@ Sprite map;
 Sprite player;
 
 bool isJump = false;
+float jumpHeight = 10;
+
 
 void UpdatePlayerPosition();
 
@@ -57,7 +59,18 @@ void OnTestSceneUpdate()
 	//cout << "TestScene running" << endl;
 	DrawSprite(sprites);
 
-	ApplyGrivaty(&player.displayRect.y, (player.displayRect.y < 300));
+	ApplyGrivaty(&player.displayRect.y, (player.displayRect.y < 300)&&!isJump);
+
+	if (player.displayRect.y<(300-jumpHeight)) {
+		isJump = false;
+		//ÌøÔ¾½áÊø
+	}
+
+	if (isJump)
+	{
+		player.displayRect.y -= jumpHeight;
+	}
+
 	//player.displayRect.y += 10;
 
 }
@@ -124,7 +137,7 @@ void UpdatePlayerPosition() {
 		break;
 	case SDLK_UP:
 		cout << "ÌøÔ¾¹¦ÄÜ" << endl;
-
+		isJump = true;
 		break;
 	default:
 		break;
