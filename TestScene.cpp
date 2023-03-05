@@ -18,7 +18,7 @@ Sprite map;
 Sprite player;
 
 bool isJump = false;
-float jumpHeight = 10;
+float jumpHeight = 50;
 
 
 void UpdatePlayerPosition();
@@ -127,6 +127,8 @@ void CreatePlayer(const char* fileName, Sprite* player, int w, int h) {
 
 void UpdatePlayerPosition() {
 	/*实现人物移动*/
+
+
 	switch (inputEvent->key.keysym.sym)
 	{
 	case SDLK_RIGHT:
