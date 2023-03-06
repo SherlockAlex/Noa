@@ -152,6 +152,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NoaMath.cpp" />
     <ClCompile Include="Physics.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Runtime.cpp" />
     <ClCompile Include="Start.cpp" />
     <ClCompile Include="TestScene.cpp" />
@@ -164,6 +165,7 @@
     <ClInclude Include="InputSystem.h" />
     <ClInclude Include="NoaMath.h" />
     <ClInclude Include="Physics.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Runtime.h" />
     <ClInclude Include="Start.h" />
