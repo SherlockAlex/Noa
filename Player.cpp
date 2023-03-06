@@ -2,10 +2,13 @@
 
 #include "Player.h"
 #include "AssetManager.h"
+#include "Physics.h"
+#include "InputSystem.h"
 
 using namespace std;
 
 void CreatePlayer(const char* fileName, Sprite* player, int w, int h);
+void UpdatePlayerPosition();
 
 Sprite player;
 
@@ -15,10 +18,23 @@ float jumpHeight = 50;
 void OnPlayerStart()
 {
 	CreatePlayer(PLAYER, &player, 192, 256);
+
+	AddToInputEvent(UpdatePlayerPosition);//将UpdatePlayerPosition绑定到输入事件上
 }
 
 void OnPlayerLoop()
 {
+	ApplyGrivaty(&player.displayRect.y, (player.displayRect.y < 300) && !GetJumpState());
+
+	if (player.displayRect.y < (300 - GetJumpHeight())) {
+		SetJumpState(false);
+		//跳跃结束
+	}
+
+	if (GetJumpState())
+	{
+		player.displayRect.y -= GetJumpHeight();
+	}
 }
 
 float GetJumpHeight()
@@ -57,4 +73,26 @@ void CreatePlayer(const char* fileName, Sprite* player, int w, int h) {
 	player->imageRect = imgRect;
 
 	cout << "绘制角色成功" << endl;
+}
+
+void UpdatePlayerPosition() {
+	/*实现人物移动*/
+
+
+	switch (inputEvent->key.keysym.sym)
+	{
+	case SDLK_RIGHT:
+		player.displayRect.x += 10;
+		break;
+	case SDLK_LEFT:
+		player.displayRect.x -= 10;
+		break;
+	case SDLK_UP:
+		cout << "跳跃" << endl;
+		SetJumpState(true);
+		break;
+	default:
+		break;
+	}
+
 }

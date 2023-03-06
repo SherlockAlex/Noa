@@ -4,7 +4,7 @@
 #include "Game.h"
 #include "AssetManager.h"
 #include "NoaMath.h"
-#include "Physics.h"
+
 #include "InputSystem.h"
 #include "Player.h"
 
@@ -15,14 +15,14 @@ Sprite * sprites[100];
 Sprite map;
 
 void CreateMap(const char* fileName, Sprite* map, int w, int h);
-void UpdatePlayerPosition();
+
 
 void OnTestSceneStart()
 {
 	//游戏场景初始化
 	cout << "TestScene loading" << endl;
-	//创建图片，创建人物
 
+	//初始化人物
 	OnPlayerStart();
 
 	CreateMap(MAP,&map, 1920, 1080);
@@ -42,10 +42,6 @@ void OnTestSceneStart()
 
 	cout << noaSqrt(2) << endl;
 	cout << inv(4) << endl;
-	//cout << factorial(5) << endl;
-
-	/*将人物移动的函数绑定到键盘事件上*/
-	AddToInputEvent(UpdatePlayerPosition);
 
 }
 
@@ -55,20 +51,7 @@ void OnTestSceneUpdate()
 	
 	DrawSprite(sprites);
 
-	ApplyGrivaty(&player.displayRect.y, (player.displayRect.y < 300)&&!GetJumpState());
-
-	if (player.displayRect.y<(300-GetJumpHeight())) {
-		SetJumpState(false);
-		//跳跃结束
-	}
-
-	if (GetJumpState())
-	{
-		player.displayRect.y -= GetJumpHeight();
-	}
-
-	//player.displayRect.y += 10;
-
+	OnPlayerLoop();
 }
 
 void CreateMap(const char* fileName, Sprite* map, int w, int h) {
@@ -98,24 +81,3 @@ void CreateMap(const char* fileName, Sprite* map, int w, int h) {
 	
 }
 
-void UpdatePlayerPosition() {
-	/*实现人物移动*/
-
-
-	switch (inputEvent->key.keysym.sym)
-	{
-	case SDLK_RIGHT:
-		player.displayRect.x += 10;
-		break;
-	case SDLK_LEFT:
-		player.displayRect.x -= 10;
-		break;
-	case SDLK_UP:
-		cout << "跳跃" << endl;
-		SetJumpState(true);
-		break;
-	default:
-		break;
-	}
-
-}
