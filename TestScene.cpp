@@ -6,19 +6,13 @@
 #include "NoaMath.h"
 #include "Physics.h"
 #include "InputSystem.h"
+#include "Player.h"
 
 using namespace std;
 
 Sprite * sprites[100];
 
-void CreateMap(const char * fileName,Sprite * map,int w,int h);
-void CreatePlayer(const char* fileName,Sprite * player,int w,int h);
-
 Sprite map;
-Sprite player;
-
-bool isJump = false;
-float jumpHeight = 50;
 
 
 void UpdatePlayerPosition();
