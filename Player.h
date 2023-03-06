@@ -17,7 +17,7 @@ extern float GetJumpHeight();
 /*正在跳跃中返回True，否则False*/
 extern bool GetJumpState();
 
-extern void SetJumpState();
+extern void SetJumpState(bool value);
 
 #endif // !NOA_PLAYER_H
 

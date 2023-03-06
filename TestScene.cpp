@@ -22,8 +22,11 @@ void OnTestSceneStart()
 	//游戏场景初始化
 	cout << "TestScene loading" << endl;
 	//创建图片，创建人物
+
+	OnPlayerStart();
+
 	CreateMap(MAP,&map, 1920, 1080);
-	CreatePlayer(PLAYER,&player, 192, 256);
+	
 	sprites[0] = &map;
 	sprites[1] = &player;
 
@@ -50,19 +53,18 @@ void OnTestSceneUpdate()
 {
 	//游戏场景运行
 	
-	//cout << "TestScene running" << endl;
 	DrawSprite(sprites);
 
-	ApplyGrivaty(&player.displayRect.y, (player.displayRect.y < 300)&&!isJump);
+	ApplyGrivaty(&player.displayRect.y, (player.displayRect.y < 300)&&!GetJumpState());
 
-	if (player.displayRect.y<(300-jumpHeight)) {
-		isJump = false;
+	if (player.displayRect.y<(300-GetJumpHeight())) {
+		SetJumpState(false);
 		//跳跃结束
 	}
 
-	if (isJump)
+	if (GetJumpState())
 	{
-		player.displayRect.y -= jumpHeight;
+		player.displayRect.y -= GetJumpHeight();
 	}
 
 	//player.displayRect.y += 10;
@@ -96,29 +98,6 @@ void CreateMap(const char* fileName, Sprite* map, int w, int h) {
 	
 }
 
-void CreatePlayer(const char* fileName, Sprite* player, int w, int h) {
-	SDL_FRect dispRect;
-
-	dispRect.x = 0;
-	dispRect.y = 0;
-	dispRect.w = 48;
-	dispRect.h = 64;
-
-	SDL_Rect imgRect;
-
-	imgRect.x = 0;
-	imgRect.y = 0;
-	imgRect.w = w;
-	imgRect.h = h;
-
-	player->surface = IMG_Load(fileName);
-	player->texture = SDL_CreateTextureFromSurface(gameRenderer, player->surface);
-	player->displayRect = dispRect;
-	player->imageRect = imgRect;
-
-	cout <<"绘制角色成功" << endl;
-}
-
 void UpdatePlayerPosition() {
 	/*实现人物移动*/
 
@@ -133,7 +112,7 @@ void UpdatePlayerPosition() {
 		break;
 	case SDLK_UP:
 		cout << "跳跃" << endl;
-		isJump = true;
+		SetJumpState(true);
 		break;
 	default:
 		break;
