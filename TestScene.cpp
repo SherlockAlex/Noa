@@ -138,7 +138,7 @@ void UpdatePlayerPosition() {
 		player.displayRect.x -= 10;
 		break;
 	case SDLK_UP:
-		cout << "ÌøÔ¾¹¦ÄÜ" << endl;
+		cout << "ÌøÔ¾" << endl;
 		isJump = true;
 		break;
 	default:
