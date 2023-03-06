@@ -5,7 +5,6 @@
 
 using namespace std;
 
-void CreateMap(const char* fileName, Sprite* map, int w, int h);
 void CreatePlayer(const char* fileName, Sprite* player, int w, int h);
 
 Sprite player;

@@ -14,7 +14,7 @@ Sprite * sprites[100];
 
 Sprite map;
 
-
+void CreateMap(const char* fileName, Sprite* map, int w, int h);
 void UpdatePlayerPosition();
 
 void OnTestSceneStart()

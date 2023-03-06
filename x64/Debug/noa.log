@@ -2,6 +2,5 @@
 D:\Work\Learn\noa\noa\Graphic.h(23,2): warning C4091: “typedef ”: 没有声明变量时忽略“Sprite”的左侧
   TestScene.cpp
 D:\Work\Learn\noa\noa\Graphic.h(23,2): warning C4091: “typedef ”: 没有声明变量时忽略“Sprite”的左侧
-D:\Work\Learn\noa\noa\TestScene.cpp(25,2): error C3861: “CreateMap”: 找不到标识符
-D:\Work\Learn\noa\noa\TestScene.cpp(26,2): error C3861: “CreatePlayer”: 找不到标识符
   正在生成代码...
+  noa.vcxproj -> D:\Work\Learn\noa\x64\Debug\noa.exe
