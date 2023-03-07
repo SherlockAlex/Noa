@@ -46,20 +46,20 @@ void DrawSprite(Sprite* sprites[])
 void DrawSprite(SpriteNode* spriteRoot)
 {
 	SDL_RenderClear(gameRenderer);
-	InOrderSpriteTree(spriteRoot);
+	PreOrderSpriteTree(spriteRoot);
 	SDL_RenderPresent(gameRenderer);
 	//cout << "渲染图片成功" << endl;
 }
 
-void InOrderSpriteTree(SpriteNode* spriteRoot)
+void PreOrderSpriteTree(SpriteNode* spriteRoot)
 {
 	//前序遍历
 	if (spriteRoot==NULL) {
 		return;
 	}
 	SDL_RenderCopyF(gameRenderer, spriteRoot->root->texture, &(spriteRoot->root->imageRect), &(spriteRoot->root->displayRect));
-	InOrderSpriteTree(spriteRoot->left);
-	InOrderSpriteTree(spriteRoot->right);
+	PreOrderSpriteTree(spriteRoot->left);
+	PreOrderSpriteTree(spriteRoot->right);
 }
 
 void DrawPixel(int x, int y)

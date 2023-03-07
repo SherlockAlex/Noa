@@ -39,7 +39,7 @@ extern void DrawSprite(Sprite * sprites[]);
 
 extern void DrawSprite(SpriteNode * spriteRoot);
 
-extern void InOrderSpriteTree(SpriteNode* spriteRoot);
+extern void PreOrderSpriteTree(SpriteNode* spriteRoot);
 
 //»æÖÆÏñËØµã
 extern void DrawPixel(int x, int y);
