@@ -22,6 +22,12 @@ typedef struct Sprite {
 	SDL_Rect  imageRect;
 };
 
+typedef struct SpriteNode {
+	Sprite* root;
+	SpriteNode* left;
+	SpriteNode* right;
+};
+
 //用来对精灵初始化
 extern Sprite CreateSprite(const char * imageName,SDL_FRect * dispRect,SDL_Rect * imgRect);
 
@@ -30,6 +36,10 @@ extern void DrawSprite(Sprite* sprite);
 
 /*绘画出精灵数组*/
 extern void DrawSprite(Sprite * sprites[]);
+
+extern void DrawSprite(SpriteNode * spriteRoot);
+
+extern void InOrderSpriteTree(SpriteNode* spriteRoot);
 
 //绘制像素点
 extern void DrawPixel(int x, int y);

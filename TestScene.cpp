@@ -49,7 +49,7 @@ void OnTestSceneUpdate()
 {
 	//游戏场景运行
 	
-	DrawSprite(sprites);
+	DrawSprite(sprites);//O(n)，循环不变式前i项不为空
 
 	OnPlayerLoop();
 }

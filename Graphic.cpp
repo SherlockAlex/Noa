@@ -43,6 +43,25 @@ void DrawSprite(Sprite* sprites[])
 	//cout << "äÖÈ¾Í¼Æ¬³É¹¦" << endl;
 }
 
+void DrawSprite(SpriteNode* spriteRoot)
+{
+	SDL_RenderClear(gameRenderer);
+	InOrderSpriteTree(spriteRoot);
+	SDL_RenderPresent(gameRenderer);
+	//cout << "äÖÈ¾Í¼Æ¬³É¹¦" << endl;
+}
+
+void InOrderSpriteTree(SpriteNode* spriteRoot)
+{
+	//Ç°Ðò±éÀú
+	if (spriteRoot==NULL) {
+		return;
+	}
+	SDL_RenderCopyF(gameRenderer, spriteRoot->root->texture, &(spriteRoot->root->imageRect), &(spriteRoot->root->displayRect));
+	InOrderSpriteTree(spriteRoot->left);
+	InOrderSpriteTree(spriteRoot->right);
+}
+
 void DrawPixel(int x, int y)
 {
 	SDL_SetRenderDrawColor(gameRenderer,255,255,255,255);
