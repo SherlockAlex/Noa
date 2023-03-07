@@ -6,6 +6,8 @@
 
 extern Sprite player;
 
+extern SpriteNode playerNode;
+
 /*人物初始化内容*/
 extern void OnPlayerStart();
 

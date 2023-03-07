@@ -11,6 +11,7 @@ void CreatePlayer(const char* fileName, Sprite* player, int w, int h);
 void UpdatePlayerPosition();
 
 Sprite player;
+SpriteNode playerNode;
 
 bool isJump = false;
 float jumpHeight = 50;
@@ -18,6 +19,11 @@ float jumpHeight = 50;
 void OnPlayerStart()
 {
 	CreatePlayer(PLAYER, &player, 192, 256);
+
+	/*初始化角色节点*/
+	playerNode.root = &player;
+	playerNode.leftNode = NULL;
+	playerNode.rightNode = NULL;
 
 	AddToInputEvent(UpdatePlayerPosition);//将UpdatePlayerPosition绑定到输入事件上
 }

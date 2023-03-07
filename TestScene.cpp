@@ -12,6 +12,8 @@ using namespace std;
 
 Sprite * sprites[100];
 
+SpriteNode mapNode;
+
 Sprite map;
 
 void CreateMap(const char* fileName, Sprite* map, int w, int h);
@@ -43,13 +45,20 @@ void OnTestSceneStart()
 	cout << noaSqrt(2) << endl;
 	cout << inv(4) << endl;
 
+	//初始化绘图节点
+	mapNode.root = &map;
+	mapNode.leftNode = &playerNode;
+	mapNode.rightNode = NULL;
+
 }
 
 void OnTestSceneUpdate()
 {
 	//游戏场景运行
 	
-	DrawSprite(sprites);//O(n)，循环不变式前i项不为空
+	//DrawSprite(sprites);//O(n)，循环不变式前i项不为空
+
+	DrawSprite(&mapNode);
 
 	OnPlayerLoop();
 }

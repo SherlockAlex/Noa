@@ -58,8 +58,8 @@ void PreOrderSpriteTree(SpriteNode* spriteRoot)
 		return;
 	}
 	SDL_RenderCopyF(gameRenderer, spriteRoot->root->texture, &(spriteRoot->root->imageRect), &(spriteRoot->root->displayRect));
-	PreOrderSpriteTree(spriteRoot->left);
-	PreOrderSpriteTree(spriteRoot->right);
+	PreOrderSpriteTree(spriteRoot->leftNode);
+	PreOrderSpriteTree(spriteRoot->rightNode);
 }
 
 void DrawPixel(int x, int y)

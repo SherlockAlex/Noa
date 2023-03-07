@@ -24,8 +24,8 @@ typedef struct Sprite {
 
 typedef struct SpriteNode {
 	Sprite* root;
-	SpriteNode* left;
-	SpriteNode* right;
+	SpriteNode* leftNode;
+	SpriteNode* rightNode;
 };
 
 //用来对精灵初始化
