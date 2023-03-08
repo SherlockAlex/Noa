@@ -87,12 +87,15 @@ void UpdatePlayerPosition() {
 
 	switch (inputEvent->key.keysym.sym)
 	{
+	case SDLK_d:
 	case SDLK_RIGHT:
 		player.displayRect.x += 10;
 		break;
+	case SDLK_a:
 	case SDLK_LEFT:
 		player.displayRect.x -= 10;
 		break;
+	case SDLK_SPACE:
 	case SDLK_UP:
 		cout << "ÌøÔ¾" << endl;
 		SetJumpState(true);
