@@ -42,9 +42,6 @@ void OnTestSceneStart()
 	cout << map.imageRect.w << endl;
 	cout << map.imageRect.h << endl;
 
-	cout << noaSqrt(2) << endl;
-	cout << inv(4) << endl;
-
 	//初始化绘图节点
 	mapNode.root = &map;
 	mapNode.leftNode = &playerNode;

@@ -1,4 +1,4 @@
-﻿  Player.cpp
+﻿  TestScene.cpp
 D:\Work\Learn\noa\noa\Graphic.h(23,2): warning C4091: “typedef ”: 没有声明变量时忽略“Sprite”的左侧
 D:\Work\Learn\noa\noa\Graphic.h(29,2): warning C4091: “typedef ”: 没有声明变量时忽略“SpriteNode”的左侧
   noa.vcxproj -> D:\Work\Learn\noa\x64\Debug\noa.exe
