@@ -5,4 +5,6 @@
 
 extern void ApplyGrivaty(float * y,bool on);
 
+/*处理游戏中物体的碰撞*/
+
 #endif // !NOA_PHYSICS_H

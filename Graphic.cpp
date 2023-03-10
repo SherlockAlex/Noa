@@ -6,21 +6,14 @@ using namespace std;
 
 Sprite CreateSprite(const char * imageName, SDL_FRect* dispRect, SDL_Rect* imgRect)
 {
+	/*创建一个对象*/
 	Sprite sprite;
+
 	sprite.surface = IMG_Load(imageName);
-	//if (sprite.surface == NULL) {
-	//	cout << "读取图片失败" << endl;
-	//	return;
-	//}
-
 	sprite.texture = SDL_CreateTextureFromSurface(gameRenderer,sprite.surface);
-	//if (sprite.texture) {
-	//	cout << "导入图片失败" << endl;
-	//	return;
-	//}
-
 	sprite.displayRect = *dispRect;
 	sprite.imageRect = *imgRect;
+
 	return sprite;
 
 }

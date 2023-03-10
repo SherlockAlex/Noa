@@ -26,13 +26,5 @@ float factorial(float x)
 		return 1;
 	}
 
-	float value = 1;
-
-	for (int i = 1; i < x;i++) {
-		value *= i;
-	}
-
-	return value;
-
-	//return (x) * factorial(x-1);
+	return (x) * factorial(x-1);
 }
