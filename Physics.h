@@ -5,6 +5,9 @@
 
 /*碰撞体，拥有该物体的上下左右信息*/
 typedef struct Collider {
+	/*分别对应上左下右*/
+	float x, y;
+	float horizontal,vertical;
 	bool direction[4] = {false,false,false,false};
 };
 
