@@ -17,4 +17,5 @@ void ApplyGrivaty(float* y, bool on)
 void OnCollidersUpdate(Collider* colliders)
 {
 	//处理碰撞体之间的碰撞问题
+	
 }
