@@ -9,7 +9,7 @@ typedef struct Collider {
 	/*
 	* 检测两个碰撞体的位置坐标，判断上下左右在范围内是否拥有碰撞体，
 	* 如果有的话，对应碰撞体之间的上下左右就打开
-	* 这就要考虑存储结构
+	* 这就要考虑场景碰撞体之间的存储结构
 	*/
 	float x, y;
 	float horizontal,vertical;
